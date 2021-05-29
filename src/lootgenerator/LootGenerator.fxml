@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="750.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lootgenerator.Controller">
-   <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
-         <children>
-            <Button id="loot" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Loot!!" />
-         </children>
-      </VBox>
-   </left>
-   <center>
-      <TextArea id="loot display" text="what i want here:&#10;when the loot button is pressed i want the loot generated to be presented here...&#10;need to add a function that allows for a given qty of loot to be generated...&#10;maybe based on encounter level, or just a number of items, or a gp/currency amount of loot...&#10;would like to be able to allow choice from different game settings; ie dnd, pathfinder, starfinder, d20 modern/future, etc, or just from all of them as one master list. &#10;maybe add printer functionality...&#10;definitely need save capabilities, save as txt file...&#10;" wrapText="true" BorderPane.alignment="CENTER" />
-   </center>
-   <padding>
-      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-   </padding>
-</BorderPane>
+<Pane prefHeight="750.0" prefWidth="550.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ChoiceBox fx:id="loot_settings" layoutX="10.0" layoutY="705.0" prefWidth="150.0" />
+      <Button fx:id="loot_btn" layoutX="170.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Loot!!" />
+      <Label layoutX="10.0" layoutY="665.0" text="Loot Settings" textFill="#eb0e0e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <ListView fx:id="loot_lst" layoutX="10.0" layoutY="10.0" prefHeight="640.0" prefWidth="530.0" style="-fx-background-color: gray;" />
+      <Button fx:id="sav_txt_btn" layoutX="447.0" layoutY="705.0" mnemonicParsing="false" onAction="#fileChooser" text="Save to Txt" />
+   </children>
+</Pane>
