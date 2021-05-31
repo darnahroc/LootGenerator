@@ -17,6 +17,9 @@ public class Controller {
     public Button loot_btn;
     public Button sav_txt_btn;
     public ListView loot_lst;
+
+    //cant get this to show in choicebox when running!!!!
+
     @FXML
     private final ChoiceBox<String> loot_settings;
 
