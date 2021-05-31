@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<Pane prefHeight="750.0" prefWidth="550.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <ChoiceBox fx:id="loot_settings" layoutX="10.0" layoutY="705.0" prefWidth="150.0" />
-      <Button fx:id="loot_btn" layoutX="170.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Loot!!" />
-      <Label layoutX="10.0" layoutY="665.0" text="Loot Settings" textFill="#eb0e0e">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Label>
-      <ListView fx:id="loot_lst" layoutX="10.0" layoutY="10.0" prefHeight="640.0" prefWidth="530.0" style="-fx-background-color: gray;" />
-      <Button fx:id="sav_txt_btn" layoutX="447.0" layoutY="705.0" mnemonicParsing="false" onAction="#fileChooser" text="Save to Txt" />
-   </children>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" prefHeight="750.0" prefWidth="550.0" style="-fx-background-color: black;"
+      xmlns="http://javafx.com/javafx/8"
+      fx:controller="lootgenerator.Controller">
+   <ChoiceBox fx:id="loot_settings" layoutX="10.0" layoutY="705.0" prefWidth="150.0"/>
+   <Button fx:id="loot_btn" layoutX="170.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleButtonAction"
+           text="Loot!!"/>
+   <Label layoutX="10.0" layoutY="665.0" text="Loot Settings" textFill="#eb0e0e">
+      <font>
+         <Font name="System Bold" size="18.0"/>
+      </font>
+   </Label>
+   <ListView fx:id="loot_lst" layoutX="10.0" layoutY="10.0" prefHeight="640.0" prefWidth="530.0"
+             style="-fx-background-color: gray;"/>
+   <Button fx:id="sav_txt_btn" layoutX="447.0" layoutY="705.0" mnemonicParsing="false" onAction="#fileChooser"
+           text="Save to Txt"/>
 </Pane>
